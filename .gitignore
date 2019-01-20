@@ -1,0 +1,4 @@
+/vendor
+.vagrant
+/homework/node_modules
+/homework/vendor
