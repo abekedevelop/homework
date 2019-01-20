@@ -37,7 +37,7 @@
                     <label for="destination">Ночей</label>
                 </div>
             </div>
-            <button class="btn right" @click="searchTour">Искать</button>
+            <button class="btn right" id="search_button" @click="searchTour">Искать</button>
         </div>
 
         <div class="row" v-if="toursReceived">
@@ -171,20 +171,22 @@ export default {
             }
 
             if (error === false) {
+                document.getElementById('search_button').disabled = true;
                 axios.post('/api/search-tour',
                     {
                         searchForm: this.searchForm
                     }).then( response => {
-                    console.log( response );
                     if (response.data.status === 'error') {
                         M.toast({
                             html: response.data.message
                         })
                     }
+                    document.getElementById('search_button').disabled = false;
                     this.toursReceived = true;
                     this.tours.get = response.data.getResponse;
                     this.tours.post = response.data.postResponse;
                 }).catch( error => {
+                    document.getElementById('search_button').disabled = false;
                     console.log( error )
                 })
             }

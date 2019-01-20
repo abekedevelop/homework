@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6e5306b-54bb-4ec5-9149-fbca3c904e6b" name="Default" comment="" />
+    <list default="true" id="e6e5306b-54bb-4ec5-9149-fbca3c904e6b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homework/public/js/app.js" afterPath="$PROJECT_DIR$/homework/public/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homework/resources/js/components/EntryPoint.vue" afterPath="$PROJECT_DIR$/homework/resources/js/components/EntryPoint.vue" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,23 +15,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EntryPoint.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EntryPoint.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/homework/resources/js/components/EntryPoint.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-283">
-              <caret line="91" column="10" lean-forward="true" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
+            <state relative-caret-position="423">
+              <caret line="188" column="78" lean-forward="false" selection-start-line="188" selection-start-column="78" selection-end-line="188" selection-end-column="78" />
               <folding>
-                <element signature="e#3810#3841#0" expanded="true" />
+                <element signature="e#3829#3860#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+              <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Homestead.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../testerOne/homework/Homestead.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -129,9 +143,10 @@
         <option value="C:/OSPanel/domains/btm_2_0/src/components/services/flight/SearchForm.vue" />
         <option value="$PROJECT_DIR$/homework/app/Http/Controllers/Api/CountryController.php" />
         <option value="$PROJECT_DIR$/homework/app/Http/Controllers/Api/TourController.php" />
-        <option value="$PROJECT_DIR$/homework/resources/js/components/EntryPoint.vue" />
         <option value="$PROJECT_DIR$/homework/.gitignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/../testerOne/homework/Homestead.yaml" />
+        <option value="$PROJECT_DIR$/homework/resources/js/components/EntryPoint.vue" />
       </list>
     </option>
   </component>
@@ -197,12 +212,6 @@
               <item name="homework" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="homework" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="homework" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -247,12 +256,12 @@
       <updated>1547879660108</updated>
       <workItem from="1547879661994" duration="3813000" />
       <workItem from="1547901666970" duration="42892000" />
-      <workItem from="1547990174848" duration="9753000" />
+      <workItem from="1547990174848" duration="11826000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56458000" />
+    <option name="totallyTimeSpent" value="58531000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -297,13 +306,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../ivy_php/ivy/resources/js/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/homework/database/seeds/CitySeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -673,21 +675,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homework/resources/js/components/EntryPoint.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-283">
-          <caret line="91" column="10" lean-forward="true" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
-          <folding>
-            <element signature="e#3810#3841#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../testerOne/homework/Homestead.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework/resources/js/components/EntryPoint.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="188" column="78" lean-forward="false" selection-start-line="188" selection-start-column="78" selection-end-line="188" selection-end-column="78" />
+          <folding>
+            <element signature="e#3829#3860#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

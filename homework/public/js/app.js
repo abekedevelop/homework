@@ -1977,21 +1977,22 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
 
       if (error === false) {
+        document.getElementById('search_button').disabled = true;
         axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/api/search-tour', {
           searchForm: this.searchForm
         }).then(function (response) {
-          console.log(response);
-
           if (response.data.status === 'error') {
             materialize_css__WEBPACK_IMPORTED_MODULE_0___default.a.toast({
               html: response.data.message
             });
           }
 
+          document.getElementById('search_button').disabled = false;
           _this3.toursReceived = true;
           _this3.tours.get = response.data.getResponse;
           _this3.tours.post = response.data.postResponse;
         }).catch(function (error) {
+          document.getElementById('search_button').disabled = false;
           console.log(error);
         });
       }
@@ -15839,7 +15840,11 @@ var render = function() {
       _vm._v(" "),
       _c(
         "button",
-        { staticClass: "btn right", on: { click: _vm.searchTour } },
+        {
+          staticClass: "btn right",
+          attrs: { id: "search_button" },
+          on: { click: _vm.searchTour }
+        },
         [_vm._v("Искать")]
       )
     ]),
