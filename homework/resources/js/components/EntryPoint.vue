@@ -5,7 +5,7 @@
                 <h5 class="center">Welcome to my homework!</h5>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="form">
             <div class="col s12">
                 <div class="input-field col s3">
                     <select id="departure_city" v-model="searchForm.departureCity">
@@ -121,7 +121,13 @@ export default {
         getCities () {
             axios.get ('/api/get-cities')
                 .then( response => {
-                    this.setCities( response.data.cities );
+                    if ( response.data.status === 'success' ) {
+                        this.setCities( response.data.cities );
+                    } else {
+                        M.toast({
+                            html: 'Произошла ошибка. Попробуйте позднее.'
+                        })
+                    }
                 }).catch( e => {
                     console.log( e )
                 })
@@ -134,7 +140,13 @@ export default {
                     }
                 })
                 .then( response => {
-                    this.setCountries( response.data )
+                    if ( response.data.status === 'success') {
+                        this.setCountries( response.data.parsedData )
+                    } else {
+                        M.toast({
+                            html: 'Произошла ошибка. Попробуйте позднее.'
+                        })
+                    }
                 })
                 .catch( error => {
                     console.log( error )
@@ -173,22 +185,22 @@ export default {
             if (error === false) {
                 document.getElementById('search_button').disabled = true;
                 axios.post('/api/search-tour',
-                    {
-                        searchForm: this.searchForm
-                    }).then( response => {
-                    if (response.data.status === 'error') {
-                        M.toast({
-                            html: response.data.message
-                        })
-                    }
-                    document.getElementById('search_button').disabled = false;
-                    this.toursReceived = true;
-                    this.tours.get = response.data.getResponse;
-                    this.tours.post = response.data.postResponse;
-                }).catch( error => {
-                    document.getElementById('search_button').disabled = false;
-                    console.log( error )
-                })
+                    { searchForm: this.searchForm })
+                    .then( response => {
+                        if (response.data.status === 'error') {
+                            M.toast({
+                                html: response.data.message
+                            });
+                            return false;
+                        }
+                        document.getElementById('search_button').disabled = false;
+                        this.toursReceived = true;
+                        this.tours.get = response.data.getResponse;
+                        this.tours.post = response.data.postResponse;
+                    }).catch( error => {
+                        document.getElementById('search_button').disabled = false;
+                        console.log( error )
+                    })
             }
         }
     },
@@ -283,4 +295,9 @@ export default {
     }
 }
 </script>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+    #form {
+        border: 2px solid lightgray;
+        padding: 2em;
+    }
+</style>

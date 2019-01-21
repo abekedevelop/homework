@@ -11,6 +11,7 @@ namespace App\Modules\City;
 
 
 use App\Models\City;
+use Illuminate\Support\Facades\Log;
 
 class CityGet
 {
@@ -18,7 +19,10 @@ class CityGet
         try {
             return City::where(['city_has_connection' => 1])->get();
         } catch (\Exception $e) {
-            return $e->getMessage();
+            Log::error('File: ' . $e->getFile());
+            Log::error('Line: ' . $e->getLine());
+            Log::error('Message: ' . $e->getMessage());
+            return false;
         }
     }
 }

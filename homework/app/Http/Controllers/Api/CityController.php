@@ -10,9 +10,12 @@ class CityController extends Controller
     public function getCities () {
         $cities = CityGet::getCities();
 
-        return [
-            'status' => 'success',
-            'cities' => $cities
-        ];
+        if ( $cities !== false ) {
+            return [
+                'status' => 'success',
+                'cities' => $cities
+            ];
+        }
+        return false;
     }
 }
